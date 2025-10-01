@@ -39,12 +39,43 @@
 
 
 * Добавить к своей виртуальной машине  диск /dev/sdb размером 2GB.
+
+![](./images/3.1.png)
+![](./images/3.2.png)
+
+Можно увидеть, что создался диск /dev/sdb
+
+
 * Создать раздел на /dev/sdb, используя fdisk или parted.
+
+![](./images/3.3.png)
+
+![](./images/3.4.png)
+
+Тут можно увидеть, что создался раздел sdb1
+
 * Создать Physical Volume (PV) на этом разделе.
+
+![](./images/3.5.png)
+
 * Создать Volume Group (VG) с именем vg_highload.
+
+![](./images/3.6.png)
+
 * Создать два Logical Volume (LV): data_lv (1200 MiB) и logs_lv (оставшееся место).
+
+![](./images/3.7.png)
+
 * Отформатировать data_lv как ext4 и примонтировать в /mnt/app_data.
 * Отформатировать logs_lv как xfs и примонтировать в /mnt/app_logs.
+
+![](./images/3.7.png)
+
+Тут я отформатировал data_lv и logs_lv
+
+![](./images/3.8.png)
+
+А тут уже примонтировал их к соответствующим папкам
 
 ## Задание 4. Использование pseudo filesystem (25 баллов)
 
@@ -54,6 +85,7 @@
   ![](./images/4.1_2.png)
 
 * Используя /proc/$$/status, найдите Parent Process ID (PPid) вашего текущего shell. что означает $$ ?
+  
   ![](./images/4.2.png)
 $$ - это PID текущего shell (он же процесс)
 
